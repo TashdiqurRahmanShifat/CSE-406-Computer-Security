@@ -1,0 +1,526 @@
+=== Advanced Website Fingerprinting Models (Bonus Task 4) ===
+
+Loading dataset from /kaggle/input/latestdata/dataset.json...
+Loaded 3300 traces
+Dataset composition:
+  https://cse.buet.ac.bd/moodle/: 1100 traces
+  https://google.com: 1100 traces
+  https://prothomalo.com: 1100 traces
+Using Standard Scaler (mean=0, std=1)
+Number of unique websites: 3
+Website names: ['https://cse.buet.ac.bd/moodle/', 'https://google.com', 'https://prothomalo.com']
+Training on 3 classes: ['https://cse.buet.ac.bd/moodle/', 'https://google.com', 'https://prothomalo.com']
+
+============================================================
+Training Basic CNN
+============================================================
+Using device: cuda
+Epoch 1/50, Train Loss: 1.0250, Train Acc: 0.4845, Test Loss: 0.9616, Test Acc: 0.5394
+Model saved with accuracy: 0.5394
+Epoch 2/50, Train Loss: 0.8690, Train Acc: 0.6386, Test Loss: 0.8082, Test Acc: 0.6515
+Model saved with accuracy: 0.6515
+Epoch 3/50, Train Loss: 0.7670, Train Acc: 0.6723, Test Loss: 0.7120, Test Acc: 0.7091
+Model saved with accuracy: 0.7091
+Epoch 4/50, Train Loss: 0.6667, Train Acc: 0.7348, Test Loss: 0.6417, Test Acc: 0.7409
+Model saved with accuracy: 0.7409
+Epoch 5/50, Train Loss: 0.6168, Train Acc: 0.7530, Test Loss: 0.5910, Test Acc: 0.7485
+Model saved with accuracy: 0.7485
+Epoch 6/50, Train Loss: 0.5696, Train Acc: 0.7530, Test Loss: 0.5613, Test Acc: 0.7606
+Model saved with accuracy: 0.7606
+Epoch 7/50, Train Loss: 0.5384, Train Acc: 0.7682, Test Loss: 0.5373, Test Acc: 0.7591
+Epoch 8/50, Train Loss: 0.4969, Train Acc: 0.7992, Test Loss: 0.5203, Test Acc: 0.7879
+Model saved with accuracy: 0.7879
+Epoch 9/50, Train Loss: 0.4662, Train Acc: 0.8083, Test Loss: 0.4985, Test Acc: 0.8000
+Model saved with accuracy: 0.8000
+Epoch 10/50, Train Loss: 0.4498, Train Acc: 0.8159, Test Loss: 0.4941, Test Acc: 0.7970
+Epoch 11/50, Train Loss: 0.4339, Train Acc: 0.8231, Test Loss: 0.4787, Test Acc: 0.8061
+Model saved with accuracy: 0.8061
+Epoch 12/50, Train Loss: 0.4208, Train Acc: 0.8303, Test Loss: 0.4748, Test Acc: 0.7924
+Epoch 13/50, Train Loss: 0.4075, Train Acc: 0.8345, Test Loss: 0.4604, Test Acc: 0.8106
+Model saved with accuracy: 0.8106
+Epoch 14/50, Train Loss: 0.3822, Train Acc: 0.8511, Test Loss: 0.4524, Test Acc: 0.8167
+Model saved with accuracy: 0.8167
+Epoch 15/50, Train Loss: 0.3671, Train Acc: 0.8527, Test Loss: 0.4547, Test Acc: 0.8091
+Epoch 16/50, Train Loss: 0.3532, Train Acc: 0.8659, Test Loss: 0.4699, Test Acc: 0.8061
+Epoch 17/50, Train Loss: 0.3484, Train Acc: 0.8606, Test Loss: 0.4508, Test Acc: 0.8136
+Epoch 18/50, Train Loss: 0.3393, Train Acc: 0.8682, Test Loss: 0.4645, Test Acc: 0.8091
+Epoch 19/50, Train Loss: 0.3243, Train Acc: 0.8788, Test Loss: 0.4512, Test Acc: 0.8106
+Epoch 20/50, Train Loss: 0.3135, Train Acc: 0.8795, Test Loss: 0.4562, Test Acc: 0.8136
+Epoch 21/50, Train Loss: 0.2993, Train Acc: 0.8845, Test Loss: 0.4519, Test Acc: 0.8045
+Epoch 22/50, Train Loss: 0.2886, Train Acc: 0.8871, Test Loss: 0.4569, Test Acc: 0.8182
+Model saved with accuracy: 0.8182
+Epoch 23/50, Train Loss: 0.2808, Train Acc: 0.8977, Test Loss: 0.4629, Test Acc: 0.8167
+Epoch 24/50, Train Loss: 0.2773, Train Acc: 0.8947, Test Loss: 0.4531, Test Acc: 0.8061
+Epoch 25/50, Train Loss: 0.2609, Train Acc: 0.9030, Test Loss: 0.4341, Test Acc: 0.8152
+Epoch 26/50, Train Loss: 0.2518, Train Acc: 0.9106, Test Loss: 0.4311, Test Acc: 0.8197
+Model saved with accuracy: 0.8197
+Epoch 27/50, Train Loss: 0.2531, Train Acc: 0.9008, Test Loss: 0.4461, Test Acc: 0.8136
+Epoch 28/50, Train Loss: 0.2377, Train Acc: 0.9110, Test Loss: 0.4457, Test Acc: 0.8212
+Model saved with accuracy: 0.8212
+Epoch 29/50, Train Loss: 0.2246, Train Acc: 0.9239, Test Loss: 0.4359, Test Acc: 0.8212
+Epoch 30/50, Train Loss: 0.2225, Train Acc: 0.9254, Test Loss: 0.4508, Test Acc: 0.8136
+Epoch 31/50, Train Loss: 0.2125, Train Acc: 0.9227, Test Loss: 0.4484, Test Acc: 0.8258
+Model saved with accuracy: 0.8258
+Epoch 32/50, Train Loss: 0.2084, Train Acc: 0.9273, Test Loss: 0.4547, Test Acc: 0.8106
+Epoch 33/50, Train Loss: 0.2090, Train Acc: 0.9292, Test Loss: 0.4393, Test Acc: 0.8182
+Epoch 34/50, Train Loss: 0.1964, Train Acc: 0.9348, Test Loss: 0.4510, Test Acc: 0.8212
+Epoch 35/50, Train Loss: 0.1909, Train Acc: 0.9386, Test Loss: 0.4463, Test Acc: 0.8091
+Epoch 36/50, Train Loss: 0.1828, Train Acc: 0.9394, Test Loss: 0.4638, Test Acc: 0.8242
+Epoch 37/50, Train Loss: 0.1740, Train Acc: 0.9470, Test Loss: 0.4587, Test Acc: 0.8091
+Epoch 38/50, Train Loss: 0.1730, Train Acc: 0.9462, Test Loss: 0.4607, Test Acc: 0.8091
+Epoch 39/50, Train Loss: 0.1617, Train Acc: 0.9470, Test Loss: 0.4619, Test Acc: 0.8091
+Epoch 40/50, Train Loss: 0.1619, Train Acc: 0.9511, Test Loss: 0.4649, Test Acc: 0.8091
+Epoch 41/50, Train Loss: 0.1458, Train Acc: 0.9629, Test Loss: 0.4577, Test Acc: 0.8106
+Epoch 42/50, Train Loss: 0.1427, Train Acc: 0.9583, Test Loss: 0.4730, Test Acc: 0.8121
+Epoch 43/50, Train Loss: 0.1419, Train Acc: 0.9591, Test Loss: 0.4651, Test Acc: 0.8106
+Epoch 44/50, Train Loss: 0.1378, Train Acc: 0.9602, Test Loss: 0.4744, Test Acc: 0.8015
+Epoch 45/50, Train Loss: 0.1432, Train Acc: 0.9553, Test Loss: 0.4899, Test Acc: 0.8045
+Epoch 46/50, Train Loss: 0.1246, Train Acc: 0.9697, Test Loss: 0.4808, Test Acc: 0.8030
+Epoch 47/50, Train Loss: 0.1164, Train Acc: 0.9678, Test Loss: 0.4826, Test Acc: 0.8136
+Epoch 48/50, Train Loss: 0.1175, Train Acc: 0.9663, Test Loss: 0.4951, Test Acc: 0.8091
+Epoch 49/50, Train Loss: 0.1133, Train Acc: 0.9693, Test Loss: 0.4898, Test Acc: 0.8045
+Epoch 50/50, Train Loss: 0.1071, Train Acc: 0.9746, Test Loss: 0.5137, Test Acc: 0.8030
+
+--- Final Evaluation for Basic CNN ---
+
+Overall Test Accuracy: 0.8258
+
+Classification Report:
+                                precision    recall  f1-score   support
+
+https://cse.buet.ac.bd/moodle/       0.78      0.73      0.76       220
+            https://google.com       0.79      0.77      0.78       220
+        https://prothomalo.com       0.90      0.97      0.93       220
+
+                      accuracy                           0.83       660
+                     macro avg       0.82      0.83      0.82       660
+                  weighted avg       0.82      0.83      0.82       660
+
+Best accuracy achieved: 0.8258
+
+============================================================
+Training Complex CNN
+============================================================
+Using device: cuda
+Epoch 1/50, Train Loss: 0.9130, Train Acc: 0.5799, Test Loss: 0.7087, Test Acc: 0.7409
+Model saved with accuracy: 0.7409
+Epoch 2/50, Train Loss: 0.6070, Train Acc: 0.7663, Test Loss: 0.5518, Test Acc: 0.7985
+Model saved with accuracy: 0.7985
+Epoch 3/50, Train Loss: 0.4832, Train Acc: 0.8288, Test Loss: 0.4935, Test Acc: 0.8167
+Model saved with accuracy: 0.8167
+Epoch 4/50, Train Loss: 0.4147, Train Acc: 0.8629, Test Loss: 0.4634, Test Acc: 0.8197
+Model saved with accuracy: 0.8197
+Epoch 5/50, Train Loss: 0.3402, Train Acc: 0.9008, Test Loss: 0.4532, Test Acc: 0.8197
+Epoch 6/50, Train Loss: 0.2704, Train Acc: 0.9303, Test Loss: 0.4403, Test Acc: 0.8273
+Model saved with accuracy: 0.8273
+Epoch 7/50, Train Loss: 0.2221, Train Acc: 0.9481, Test Loss: 0.4476, Test Acc: 0.8273
+Epoch 8/50, Train Loss: 0.1722, Train Acc: 0.9727, Test Loss: 0.4331, Test Acc: 0.8288
+Model saved with accuracy: 0.8288
+Epoch 9/50, Train Loss: 0.1372, Train Acc: 0.9841, Test Loss: 0.4473, Test Acc: 0.8061
+Epoch 10/50, Train Loss: 0.1172, Train Acc: 0.9852, Test Loss: 0.4308, Test Acc: 0.8288
+Epoch 11/50, Train Loss: 0.0945, Train Acc: 0.9902, Test Loss: 0.4486, Test Acc: 0.8318
+Model saved with accuracy: 0.8318
+Epoch 12/50, Train Loss: 0.0761, Train Acc: 0.9947, Test Loss: 0.4658, Test Acc: 0.8258
+Epoch 13/50, Train Loss: 0.0602, Train Acc: 0.9962, Test Loss: 0.4646, Test Acc: 0.8197
+Epoch 14/50, Train Loss: 0.0532, Train Acc: 0.9966, Test Loss: 0.4588, Test Acc: 0.8197
+Epoch 15/50, Train Loss: 0.0488, Train Acc: 0.9981, Test Loss: 0.4876, Test Acc: 0.8121
+Epoch 16/50, Train Loss: 0.0414, Train Acc: 0.9981, Test Loss: 0.5012, Test Acc: 0.8106
+Epoch 17/50, Train Loss: 0.0364, Train Acc: 0.9973, Test Loss: 0.4737, Test Acc: 0.8273
+Epoch 18/50, Train Loss: 0.0330, Train Acc: 0.9989, Test Loss: 0.4773, Test Acc: 0.8242
+Epoch 19/50, Train Loss: 0.0303, Train Acc: 0.9985, Test Loss: 0.4656, Test Acc: 0.8303
+Epoch 20/50, Train Loss: 0.0257, Train Acc: 1.0000, Test Loss: 0.4701, Test Acc: 0.8348
+Model saved with accuracy: 0.8348
+Epoch 21/50, Train Loss: 0.0253, Train Acc: 0.9985, Test Loss: 0.4855, Test Acc: 0.8258
+Epoch 22/50, Train Loss: 0.0197, Train Acc: 1.0000, Test Loss: 0.4830, Test Acc: 0.8364
+Model saved with accuracy: 0.8364
+Epoch 23/50, Train Loss: 0.0182, Train Acc: 0.9996, Test Loss: 0.4919, Test Acc: 0.8227
+Epoch 24/50, Train Loss: 0.0210, Train Acc: 0.9989, Test Loss: 0.4966, Test Acc: 0.8121
+Epoch 25/50, Train Loss: 0.0174, Train Acc: 0.9996, Test Loss: 0.4874, Test Acc: 0.8288
+Epoch 26/50, Train Loss: 0.0147, Train Acc: 1.0000, Test Loss: 0.5115, Test Acc: 0.8152
+Epoch 27/50, Train Loss: 0.0161, Train Acc: 0.9992, Test Loss: 0.5194, Test Acc: 0.8273
+Epoch 28/50, Train Loss: 0.0126, Train Acc: 1.0000, Test Loss: 0.5103, Test Acc: 0.8212
+Epoch 29/50, Train Loss: 0.0118, Train Acc: 0.9996, Test Loss: 0.5105, Test Acc: 0.8303
+Epoch 30/50, Train Loss: 0.0110, Train Acc: 1.0000, Test Loss: 0.5296, Test Acc: 0.8288
+Epoch 31/50, Train Loss: 0.0094, Train Acc: 0.9996, Test Loss: 0.5307, Test Acc: 0.8273
+Epoch 32/50, Train Loss: 0.0193, Train Acc: 0.9973, Test Loss: 0.5343, Test Acc: 0.8318
+Epoch 33/50, Train Loss: 0.0152, Train Acc: 0.9996, Test Loss: 0.5191, Test Acc: 0.8318
+Epoch 34/50, Train Loss: 0.0128, Train Acc: 0.9992, Test Loss: 0.6578, Test Acc: 0.8091
+Epoch 35/50, Train Loss: 0.0148, Train Acc: 0.9989, Test Loss: 0.5317, Test Acc: 0.8258
+Epoch 36/50, Train Loss: 0.0104, Train Acc: 1.0000, Test Loss: 0.5340, Test Acc: 0.8288
+Epoch 37/50, Train Loss: 0.0108, Train Acc: 1.0000, Test Loss: 0.5650, Test Acc: 0.8212
+Epoch 38/50, Train Loss: 0.0083, Train Acc: 1.0000, Test Loss: 0.5472, Test Acc: 0.8318
+Epoch 39/50, Train Loss: 0.0095, Train Acc: 0.9996, Test Loss: 0.5944, Test Acc: 0.8182
+Epoch 40/50, Train Loss: 0.0159, Train Acc: 0.9981, Test Loss: 0.6166, Test Acc: 0.8242
+Epoch 41/50, Train Loss: 0.0137, Train Acc: 0.9981, Test Loss: 0.5905, Test Acc: 0.8318
+Epoch 42/50, Train Loss: 0.0106, Train Acc: 1.0000, Test Loss: 0.5996, Test Acc: 0.8212
+Epoch 43/50, Train Loss: 0.0073, Train Acc: 1.0000, Test Loss: 0.5933, Test Acc: 0.8167
+Epoch 44/50, Train Loss: 0.0079, Train Acc: 1.0000, Test Loss: 0.5886, Test Acc: 0.8273
+Epoch 45/50, Train Loss: 0.0071, Train Acc: 0.9996, Test Loss: 0.5845, Test Acc: 0.8227
+Epoch 46/50, Train Loss: 0.0077, Train Acc: 1.0000, Test Loss: 0.6282, Test Acc: 0.8242
+Epoch 47/50, Train Loss: 0.0070, Train Acc: 1.0000, Test Loss: 0.5838, Test Acc: 0.8273
+Epoch 48/50, Train Loss: 0.0073, Train Acc: 0.9996, Test Loss: 0.5979, Test Acc: 0.8152
+Epoch 49/50, Train Loss: 0.0158, Train Acc: 0.9981, Test Loss: 0.5838, Test Acc: 0.8212
+Epoch 50/50, Train Loss: 0.0219, Train Acc: 0.9962, Test Loss: 0.6047, Test Acc: 0.8197
+
+--- Final Evaluation for Complex CNN ---
+
+Overall Test Accuracy: 0.8364
+
+Classification Report:
+                                precision    recall  f1-score   support
+
+https://cse.buet.ac.bd/moodle/       0.80      0.73      0.76       220
+            https://google.com       0.76      0.81      0.79       220
+        https://prothomalo.com       0.94      0.97      0.96       220
+
+                      accuracy                           0.84       660
+                     macro avg       0.84      0.84      0.84       660
+                  weighted avg       0.84      0.84      0.84       660
+
+Best accuracy achieved: 0.8364
+
+============================================================
+Training Advanced ResNet
+============================================================
+Using device: cuda
+/usr/local/lib/python3.11/dist-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+Epoch 1/50, Train Loss: 0.8955, Train Acc: 0.5758, Test Loss: 0.6757, Test Acc: 0.7348
+Model saved with accuracy: 0.7348
+Epoch 2/50, Train Loss: 0.6490, Train Acc: 0.6826, Test Loss: 0.5704, Test Acc: 0.7773
+Model saved with accuracy: 0.7773
+Epoch 3/50, Train Loss: 0.5719, Train Acc: 0.7258, Test Loss: 0.5199, Test Acc: 0.7636
+Epoch 4/50, Train Loss: 0.5035, Train Acc: 0.7610, Test Loss: 0.4932, Test Acc: 0.7773
+Epoch 5/50, Train Loss: 0.4298, Train Acc: 0.8102, Test Loss: 0.5435, Test Acc: 0.7818
+Model saved with accuracy: 0.7818
+Epoch 6/50, Train Loss: 0.3043, Train Acc: 0.8875, Test Loss: 0.5331, Test Acc: 0.7636
+Epoch 7/50, Train Loss: 0.1970, Train Acc: 0.9470, Test Loss: 0.5831, Test Acc: 0.7424
+Epoch 8/50, Train Loss: 0.1313, Train Acc: 0.9686, Test Loss: 0.8177, Test Acc: 0.7136
+Epoch 9/50, Train Loss: 0.0873, Train Acc: 0.9777, Test Loss: 1.1509, Test Acc: 0.6758
+Epoch 10/50, Train Loss: 0.0702, Train Acc: 0.9784, Test Loss: 0.7594, Test Acc: 0.7455
+Epoch 11/50, Train Loss: 0.0855, Train Acc: 0.9727, Test Loss: 0.8553, Test Acc: 0.7409
+Epoch 12/50, Train Loss: 0.0454, Train Acc: 0.9867, Test Loss: 0.7963, Test Acc: 0.7591
+Epoch 13/50, Train Loss: 0.0313, Train Acc: 0.9905, Test Loss: 1.0721, Test Acc: 0.7318
+Epoch 14/50, Train Loss: 0.0293, Train Acc: 0.9898, Test Loss: 1.0334, Test Acc: 0.7227
+Epoch 15/50, Train Loss: 0.0229, Train Acc: 0.9920, Test Loss: 1.0135, Test Acc: 0.7318
+Epoch 16/50, Train Loss: 0.0259, Train Acc: 0.9951, Test Loss: 1.0603, Test Acc: 0.7530
+Epoch 17/50, Train Loss: 0.0207, Train Acc: 0.9947, Test Loss: 1.4777, Test Acc: 0.7091
+Epoch 18/50, Train Loss: 0.0124, Train Acc: 0.9966, Test Loss: 1.0807, Test Acc: 0.7636
+Epoch 19/50, Train Loss: 0.0093, Train Acc: 0.9981, Test Loss: 1.0335, Test Acc: 0.7621
+Epoch 20/50, Train Loss: 0.0071, Train Acc: 0.9989, Test Loss: 1.0468, Test Acc: 0.7758
+Epoch 21/50, Train Loss: 0.0040, Train Acc: 1.0000, Test Loss: 0.9897, Test Acc: 0.7833
+Model saved with accuracy: 0.7833
+Epoch 22/50, Train Loss: 0.0041, Train Acc: 0.9996, Test Loss: 1.1510, Test Acc: 0.7773
+Epoch 23/50, Train Loss: 0.0035, Train Acc: 0.9996, Test Loss: 1.0690, Test Acc: 0.7773
+Epoch 24/50, Train Loss: 0.0095, Train Acc: 0.9973, Test Loss: 1.3283, Test Acc: 0.7379
+Epoch 25/50, Train Loss: 0.0048, Train Acc: 0.9989, Test Loss: 1.1184, Test Acc: 0.7636
+Epoch 26/50, Train Loss: 0.0054, Train Acc: 0.9989, Test Loss: 1.0756, Test Acc: 0.7788
+Epoch 27/50, Train Loss: 0.0030, Train Acc: 0.9992, Test Loss: 1.0898, Test Acc: 0.7848
+Model saved with accuracy: 0.7848
+Epoch 28/50, Train Loss: 0.0039, Train Acc: 0.9996, Test Loss: 1.1062, Test Acc: 0.7712
+Epoch 29/50, Train Loss: 0.0073, Train Acc: 0.9981, Test Loss: 1.3575, Test Acc: 0.7409
+Epoch 30/50, Train Loss: 0.0018, Train Acc: 1.0000, Test Loss: 1.1714, Test Acc: 0.7773
+Epoch 31/50, Train Loss: 0.0027, Train Acc: 0.9992, Test Loss: 1.1659, Test Acc: 0.7667
+Epoch 32/50, Train Loss: 0.0018, Train Acc: 1.0000, Test Loss: 1.3720, Test Acc: 0.7288
+Epoch 33/50, Train Loss: 0.0033, Train Acc: 0.9992, Test Loss: 1.2378, Test Acc: 0.7697
+Epoch 34/50, Train Loss: 0.0011, Train Acc: 1.0000, Test Loss: 1.2138, Test Acc: 0.7606
+Epoch 35/50, Train Loss: 0.0011, Train Acc: 1.0000, Test Loss: 1.2143, Test Acc: 0.7712
+Epoch 36/50, Train Loss: 0.0011, Train Acc: 1.0000, Test Loss: 1.1719, Test Acc: 0.7636
+Epoch 37/50, Train Loss: 0.0010, Train Acc: 1.0000, Test Loss: 1.2044, Test Acc: 0.7697
+Epoch 38/50, Train Loss: 0.0011, Train Acc: 1.0000, Test Loss: 1.2197, Test Acc: 0.7697
+Epoch 39/50, Train Loss: 0.0013, Train Acc: 1.0000, Test Loss: 1.2329, Test Acc: 0.7773
+Epoch 40/50, Train Loss: 0.0011, Train Acc: 1.0000, Test Loss: 1.2312, Test Acc: 0.7803
+Epoch 41/50, Train Loss: 0.0011, Train Acc: 1.0000, Test Loss: 1.2284, Test Acc: 0.7727
+Epoch 42/50, Train Loss: 0.0009, Train Acc: 1.0000, Test Loss: 1.2155, Test Acc: 0.7697
+Epoch 43/50, Train Loss: 0.0008, Train Acc: 1.0000, Test Loss: 1.2239, Test Acc: 0.7742
+Epoch 44/50, Train Loss: 0.0010, Train Acc: 1.0000, Test Loss: 1.2282, Test Acc: 0.7682
+Epoch 45/50, Train Loss: 0.0044, Train Acc: 0.9992, Test Loss: 1.2190, Test Acc: 0.7818
+Epoch 46/50, Train Loss: 0.0010, Train Acc: 1.0000, Test Loss: 1.2076, Test Acc: 0.7758
+Epoch 47/50, Train Loss: 0.0009, Train Acc: 1.0000, Test Loss: 1.2145, Test Acc: 0.7682
+Epoch 48/50, Train Loss: 0.0007, Train Acc: 1.0000, Test Loss: 1.2024, Test Acc: 0.7773
+Epoch 49/50, Train Loss: 0.0014, Train Acc: 0.9996, Test Loss: 1.2249, Test Acc: 0.7788
+Epoch 50/50, Train Loss: 0.0007, Train Acc: 1.0000, Test Loss: 1.2029, Test Acc: 0.7833
+
+--- Final Evaluation for Advanced ResNet ---
+
+Overall Test Accuracy: 0.7848
+
+Classification Report:
+                                precision    recall  f1-score   support
+
+https://cse.buet.ac.bd/moodle/       0.70      0.66      0.68       220
+            https://google.com       0.72      0.71      0.72       220
+        https://prothomalo.com       0.92      0.98      0.95       220
+
+                      accuracy                           0.78       660
+                     macro avg       0.78      0.78      0.78       660
+                  weighted avg       0.78      0.78      0.78       660
+
+Best accuracy achieved: 0.7848
+
+============================================================
+Training Transformer
+============================================================
+Using device: cuda
+/usr/local/lib/python3.11/dist-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+Epoch 1/50, Train Loss: 1.0934, Train Acc: 0.3576, Test Loss: 1.0766, Test Acc: 0.5500
+Model saved with accuracy: 0.5500
+Epoch 2/50, Train Loss: 1.0559, Train Acc: 0.4951, Test Loss: 1.0085, Test Acc: 0.5652
+Model saved with accuracy: 0.5652
+Epoch 3/50, Train Loss: 0.9689, Train Acc: 0.5826, Test Loss: 0.8815, Test Acc: 0.6106
+Model saved with accuracy: 0.6106
+Epoch 4/50, Train Loss: 0.8423, Train Acc: 0.6110, Test Loss: 0.7860, Test Acc: 0.6212
+Model saved with accuracy: 0.6212
+Epoch 5/50, Train Loss: 0.7696, Train Acc: 0.6220, Test Loss: 0.7393, Test Acc: 0.6545
+Model saved with accuracy: 0.6545
+Epoch 6/50, Train Loss: 0.7256, Train Acc: 0.6356, Test Loss: 0.6979, Test Acc: 0.6758
+Model saved with accuracy: 0.6758
+Epoch 7/50, Train Loss: 0.6903, Train Acc: 0.6386, Test Loss: 0.6626, Test Acc: 0.6879
+Model saved with accuracy: 0.6879
+Epoch 8/50, Train Loss: 0.6890, Train Acc: 0.6420, Test Loss: 0.6380, Test Acc: 0.7045
+Model saved with accuracy: 0.7045
+Epoch 9/50, Train Loss: 0.6476, Train Acc: 0.6667, Test Loss: 0.6115, Test Acc: 0.7182
+Model saved with accuracy: 0.7182
+Epoch 10/50, Train Loss: 0.6267, Train Acc: 0.6735, Test Loss: 0.6081, Test Acc: 0.6833
+Epoch 11/50, Train Loss: 0.6186, Train Acc: 0.6674, Test Loss: 0.5858, Test Acc: 0.7273
+Model saved with accuracy: 0.7273
+Epoch 12/50, Train Loss: 0.6050, Train Acc: 0.6814, Test Loss: 0.5831, Test Acc: 0.7318
+Model saved with accuracy: 0.7318
+Epoch 13/50, Train Loss: 0.5943, Train Acc: 0.6928, Test Loss: 0.5762, Test Acc: 0.7333
+Model saved with accuracy: 0.7333
+Epoch 14/50, Train Loss: 0.5832, Train Acc: 0.6966, Test Loss: 0.5952, Test Acc: 0.7000
+Epoch 15/50, Train Loss: 0.5842, Train Acc: 0.6902, Test Loss: 0.5564, Test Acc: 0.7212
+Epoch 16/50, Train Loss: 0.5757, Train Acc: 0.7121, Test Loss: 0.5519, Test Acc: 0.7303
+Epoch 17/50, Train Loss: 0.5649, Train Acc: 0.7148, Test Loss: 0.5599, Test Acc: 0.7182
+Epoch 18/50, Train Loss: 0.5574, Train Acc: 0.7273, Test Loss: 0.5493, Test Acc: 0.7606
+Model saved with accuracy: 0.7606
+Epoch 19/50, Train Loss: 0.5634, Train Acc: 0.7299, Test Loss: 0.5517, Test Acc: 0.7227
+Epoch 20/50, Train Loss: 0.5600, Train Acc: 0.7155, Test Loss: 0.5457, Test Acc: 0.7424
+Epoch 21/50, Train Loss: 0.5526, Train Acc: 0.7292, Test Loss: 0.5485, Test Acc: 0.7545
+Epoch 22/50, Train Loss: 0.5500, Train Acc: 0.7250, Test Loss: 0.5248, Test Acc: 0.7455
+Epoch 23/50, Train Loss: 0.5464, Train Acc: 0.7379, Test Loss: 0.5207, Test Acc: 0.7455
+Epoch 24/50, Train Loss: 0.5380, Train Acc: 0.7348, Test Loss: 0.5328, Test Acc: 0.7530
+Epoch 25/50, Train Loss: 0.5237, Train Acc: 0.7413, Test Loss: 0.5222, Test Acc: 0.7652
+Model saved with accuracy: 0.7652
+Epoch 26/50, Train Loss: 0.5190, Train Acc: 0.7360, Test Loss: 0.5151, Test Acc: 0.7591
+Epoch 27/50, Train Loss: 0.5203, Train Acc: 0.7436, Test Loss: 0.5162, Test Acc: 0.7606
+Epoch 28/50, Train Loss: 0.5147, Train Acc: 0.7500, Test Loss: 0.5219, Test Acc: 0.7530
+Epoch 29/50, Train Loss: 0.5114, Train Acc: 0.7439, Test Loss: 0.5329, Test Acc: 0.7409
+Epoch 30/50, Train Loss: 0.5106, Train Acc: 0.7443, Test Loss: 0.5179, Test Acc: 0.7591
+Epoch 31/50, Train Loss: 0.5097, Train Acc: 0.7398, Test Loss: 0.5145, Test Acc: 0.7561
+Epoch 32/50, Train Loss: 0.4993, Train Acc: 0.7587, Test Loss: 0.5118, Test Acc: 0.7561
+Epoch 33/50, Train Loss: 0.5110, Train Acc: 0.7511, Test Loss: 0.5101, Test Acc: 0.7545
+Epoch 34/50, Train Loss: 0.4992, Train Acc: 0.7477, Test Loss: 0.5042, Test Acc: 0.7621
+Epoch 35/50, Train Loss: 0.5014, Train Acc: 0.7553, Test Loss: 0.5030, Test Acc: 0.7591
+Epoch 36/50, Train Loss: 0.5026, Train Acc: 0.7564, Test Loss: 0.5016, Test Acc: 0.7515
+Epoch 37/50, Train Loss: 0.4975, Train Acc: 0.7542, Test Loss: 0.5012, Test Acc: 0.7682
+Model saved with accuracy: 0.7682
+Epoch 38/50, Train Loss: 0.4873, Train Acc: 0.7633, Test Loss: 0.5009, Test Acc: 0.7636
+Epoch 39/50, Train Loss: 0.4851, Train Acc: 0.7652, Test Loss: 0.5165, Test Acc: 0.7636
+Epoch 40/50, Train Loss: 0.4944, Train Acc: 0.7549, Test Loss: 0.5034, Test Acc: 0.7439
+Epoch 41/50, Train Loss: 0.4915, Train Acc: 0.7557, Test Loss: 0.4964, Test Acc: 0.7530
+Epoch 42/50, Train Loss: 0.4892, Train Acc: 0.7652, Test Loss: 0.4938, Test Acc: 0.7652
+Epoch 43/50, Train Loss: 0.4860, Train Acc: 0.7625, Test Loss: 0.5009, Test Acc: 0.7470
+Epoch 44/50, Train Loss: 0.4854, Train Acc: 0.7568, Test Loss: 0.4925, Test Acc: 0.7591
+Epoch 45/50, Train Loss: 0.4857, Train Acc: 0.7621, Test Loss: 0.4968, Test Acc: 0.7561
+Epoch 46/50, Train Loss: 0.4805, Train Acc: 0.7678, Test Loss: 0.4963, Test Acc: 0.7591
+Epoch 47/50, Train Loss: 0.4808, Train Acc: 0.7652, Test Loss: 0.4946, Test Acc: 0.7545
+Epoch 48/50, Train Loss: 0.4792, Train Acc: 0.7682, Test Loss: 0.4899, Test Acc: 0.7652
+Epoch 49/50, Train Loss: 0.4784, Train Acc: 0.7686, Test Loss: 0.4959, Test Acc: 0.7561
+Epoch 50/50, Train Loss: 0.4792, Train Acc: 0.7636, Test Loss: 0.4937, Test Acc: 0.7621
+
+--- Final Evaluation for Transformer ---
+
+Overall Test Accuracy: 0.7682
+
+Classification Report:
+                                precision    recall  f1-score   support
+
+https://cse.buet.ac.bd/moodle/       0.69      0.67      0.68       220
+            https://google.com       0.69      0.69      0.69       220
+        https://prothomalo.com       0.92      0.94      0.93       220
+
+                      accuracy                           0.77       660
+                     macro avg       0.77      0.77      0.77       660
+                  weighted avg       0.77      0.77      0.77       660
+
+Best accuracy achieved: 0.7682
+
+============================================================
+Training Hybrid CNN-Transformer
+============================================================
+Using device: cuda
+/usr/local/lib/python3.11/dist-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+Epoch 1/50, Train Loss: 1.0236, Train Acc: 0.5284, Test Loss: 0.9408, Test Acc: 0.6136
+Model saved with accuracy: 0.6136
+Epoch 2/50, Train Loss: 0.8716, Train Acc: 0.6473, Test Loss: 0.7788, Test Acc: 0.6818
+Model saved with accuracy: 0.6818
+Epoch 3/50, Train Loss: 0.7668, Train Acc: 0.6402, Test Loss: 0.6922, Test Acc: 0.7288
+Model saved with accuracy: 0.7288
+Epoch 4/50, Train Loss: 0.7042, Train Acc: 0.6667, Test Loss: 0.6396, Test Acc: 0.7606
+Model saved with accuracy: 0.7606
+Epoch 5/50, Train Loss: 0.6583, Train Acc: 0.6799, Test Loss: 0.5855, Test Acc: 0.7667
+Model saved with accuracy: 0.7667
+Epoch 6/50, Train Loss: 0.6266, Train Acc: 0.7076, Test Loss: 0.5649, Test Acc: 0.7636
+Epoch 7/50, Train Loss: 0.5827, Train Acc: 0.7235, Test Loss: 0.5220, Test Acc: 0.7848
+Model saved with accuracy: 0.7848
+Epoch 8/50, Train Loss: 0.5624, Train Acc: 0.7405, Test Loss: 0.5127, Test Acc: 0.7606
+Epoch 9/50, Train Loss: 0.5516, Train Acc: 0.7420, Test Loss: 0.5372, Test Acc: 0.7530
+Epoch 10/50, Train Loss: 0.5396, Train Acc: 0.7443, Test Loss: 0.4921, Test Acc: 0.7712
+Epoch 11/50, Train Loss: 0.5505, Train Acc: 0.7326, Test Loss: 0.5074, Test Acc: 0.7773
+Epoch 12/50, Train Loss: 0.5218, Train Acc: 0.7542, Test Loss: 0.4966, Test Acc: 0.7636
+Epoch 13/50, Train Loss: 0.4989, Train Acc: 0.7644, Test Loss: 0.4813, Test Acc: 0.7833
+Epoch 14/50, Train Loss: 0.4975, Train Acc: 0.7595, Test Loss: 0.5314, Test Acc: 0.7561
+Epoch 15/50, Train Loss: 0.4983, Train Acc: 0.7553, Test Loss: 0.4678, Test Acc: 0.7864
+Model saved with accuracy: 0.7864
+Epoch 16/50, Train Loss: 0.4807, Train Acc: 0.7765, Test Loss: 0.4646, Test Acc: 0.7955
+Model saved with accuracy: 0.7955
+Epoch 17/50, Train Loss: 0.4866, Train Acc: 0.7655, Test Loss: 0.4672, Test Acc: 0.7970
+Model saved with accuracy: 0.7970
+Epoch 18/50, Train Loss: 0.5006, Train Acc: 0.7477, Test Loss: 0.4621, Test Acc: 0.7970
+Epoch 19/50, Train Loss: 0.4880, Train Acc: 0.7652, Test Loss: 0.4620, Test Acc: 0.7818
+Epoch 20/50, Train Loss: 0.4909, Train Acc: 0.7561, Test Loss: 0.4614, Test Acc: 0.7803
+Epoch 21/50, Train Loss: 0.4832, Train Acc: 0.7705, Test Loss: 0.4794, Test Acc: 0.7818
+Epoch 22/50, Train Loss: 0.4748, Train Acc: 0.7674, Test Loss: 0.4727, Test Acc: 0.7742
+Epoch 23/50, Train Loss: 0.4661, Train Acc: 0.7746, Test Loss: 0.4581, Test Acc: 0.7864
+Epoch 24/50, Train Loss: 0.4660, Train Acc: 0.7769, Test Loss: 0.4580, Test Acc: 0.8136
+Model saved with accuracy: 0.8136
+Epoch 25/50, Train Loss: 0.4588, Train Acc: 0.7848, Test Loss: 0.4567, Test Acc: 0.7939
+Epoch 26/50, Train Loss: 0.4718, Train Acc: 0.7697, Test Loss: 0.4533, Test Acc: 0.8091
+Epoch 27/50, Train Loss: 0.4630, Train Acc: 0.7739, Test Loss: 0.4592, Test Acc: 0.7864
+Epoch 28/50, Train Loss: 0.4610, Train Acc: 0.7750, Test Loss: 0.4572, Test Acc: 0.7864
+Epoch 29/50, Train Loss: 0.4656, Train Acc: 0.7841, Test Loss: 0.4506, Test Acc: 0.8121
+Epoch 30/50, Train Loss: 0.4540, Train Acc: 0.7799, Test Loss: 0.4545, Test Acc: 0.8121
+Epoch 31/50, Train Loss: 0.4616, Train Acc: 0.7739, Test Loss: 0.4547, Test Acc: 0.7939
+Epoch 32/50, Train Loss: 0.4525, Train Acc: 0.7951, Test Loss: 0.4517, Test Acc: 0.8167
+Model saved with accuracy: 0.8167
+Epoch 33/50, Train Loss: 0.4461, Train Acc: 0.7917, Test Loss: 0.4516, Test Acc: 0.8076
+Epoch 34/50, Train Loss: 0.4396, Train Acc: 0.7848, Test Loss: 0.4530, Test Acc: 0.8076
+Epoch 35/50, Train Loss: 0.4468, Train Acc: 0.7852, Test Loss: 0.4526, Test Acc: 0.8091
+Epoch 36/50, Train Loss: 0.4479, Train Acc: 0.7932, Test Loss: 0.4494, Test Acc: 0.8106
+Epoch 37/50, Train Loss: 0.4518, Train Acc: 0.7780, Test Loss: 0.4491, Test Acc: 0.8091
+Epoch 38/50, Train Loss: 0.4450, Train Acc: 0.7871, Test Loss: 0.4500, Test Acc: 0.8152
+Epoch 39/50, Train Loss: 0.4456, Train Acc: 0.7871, Test Loss: 0.4474, Test Acc: 0.8061
+Epoch 40/50, Train Loss: 0.4440, Train Acc: 0.7826, Test Loss: 0.4486, Test Acc: 0.8106
+Epoch 41/50, Train Loss: 0.4423, Train Acc: 0.7883, Test Loss: 0.4474, Test Acc: 0.8076
+Epoch 42/50, Train Loss: 0.4478, Train Acc: 0.7777, Test Loss: 0.4455, Test Acc: 0.8152
+Epoch 43/50, Train Loss: 0.4372, Train Acc: 0.7913, Test Loss: 0.4460, Test Acc: 0.8197
+Model saved with accuracy: 0.8197
+Epoch 44/50, Train Loss: 0.4373, Train Acc: 0.7951, Test Loss: 0.4467, Test Acc: 0.8136
+Epoch 45/50, Train Loss: 0.4468, Train Acc: 0.7883, Test Loss: 0.4462, Test Acc: 0.8091
+Epoch 46/50, Train Loss: 0.4437, Train Acc: 0.7894, Test Loss: 0.4460, Test Acc: 0.8076
+Epoch 47/50, Train Loss: 0.4431, Train Acc: 0.7879, Test Loss: 0.4440, Test Acc: 0.8106
+Epoch 48/50, Train Loss: 0.4357, Train Acc: 0.7932, Test Loss: 0.4432, Test Acc: 0.8045
+Epoch 49/50, Train Loss: 0.4383, Train Acc: 0.7992, Test Loss: 0.4440, Test Acc: 0.8121
+Epoch 50/50, Train Loss: 0.4443, Train Acc: 0.7917, Test Loss: 0.4434, Test Acc: 0.8106
+
+--- Final Evaluation for Hybrid CNN-Transformer ---
+
+Overall Test Accuracy: 0.8197
+
+Classification Report:
+                                precision    recall  f1-score   support
+
+https://cse.buet.ac.bd/moodle/       0.75      0.74      0.74       220
+            https://google.com       0.76      0.74      0.75       220
+        https://prothomalo.com       0.94      0.99      0.96       220
+
+                      accuracy                           0.82       660
+                     macro avg       0.82      0.82      0.82       660
+                  weighted avg       0.82      0.82      0.82       660
+
+Best accuracy achieved: 0.8197
+
+============================================================
+Training Ensemble Model
+============================================================
+Using device: cuda
+/usr/local/lib/python3.11/dist-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+Epoch 1/25, Train Loss: 0.1745, Train Acc: 0.9864, Test Loss: 0.3753, Test Acc: 0.8379
+Model saved with accuracy: 0.8379
+Epoch 2/25, Train Loss: 0.1704, Train Acc: 0.9860, Test Loss: 0.3744, Test Acc: 0.8424
+Model saved with accuracy: 0.8424
+Epoch 3/25, Train Loss: 0.1668, Train Acc: 0.9879, Test Loss: 0.3758, Test Acc: 0.8409
+Epoch 4/25, Train Loss: 0.1637, Train Acc: 0.9875, Test Loss: 0.3751, Test Acc: 0.8439
+Model saved with accuracy: 0.8439
+Epoch 5/25, Train Loss: 0.1631, Train Acc: 0.9845, Test Loss: 0.3737, Test Acc: 0.8470
+Model saved with accuracy: 0.8470
+Epoch 6/25, Train Loss: 0.1601, Train Acc: 0.9867, Test Loss: 0.3715, Test Acc: 0.8439
+Epoch 7/25, Train Loss: 0.1607, Train Acc: 0.9837, Test Loss: 0.3728, Test Acc: 0.8439
+Epoch 8/25, Train Loss: 0.1566, Train Acc: 0.9852, Test Loss: 0.3721, Test Acc: 0.8424
+Epoch 9/25, Train Loss: 0.1554, Train Acc: 0.9852, Test Loss: 0.3716, Test Acc: 0.8455
+Epoch 10/25, Train Loss: 0.1515, Train Acc: 0.9841, Test Loss: 0.3756, Test Acc: 0.8515
+Model saved with accuracy: 0.8515
+Epoch 11/25, Train Loss: 0.1500, Train Acc: 0.9848, Test Loss: 0.3755, Test Acc: 0.8439
+Epoch 12/25, Train Loss: 0.1520, Train Acc: 0.9807, Test Loss: 0.3760, Test Acc: 0.8470
+Epoch 13/25, Train Loss: 0.1515, Train Acc: 0.9830, Test Loss: 0.3733, Test Acc: 0.8485
+Epoch 14/25, Train Loss: 0.1470, Train Acc: 0.9848, Test Loss: 0.3780, Test Acc: 0.8515
+Epoch 15/25, Train Loss: 0.1478, Train Acc: 0.9848, Test Loss: 0.3759, Test Acc: 0.8439
+Epoch 16/25, Train Loss: 0.1452, Train Acc: 0.9837, Test Loss: 0.3725, Test Acc: 0.8470
+Epoch 17/25, Train Loss: 0.1435, Train Acc: 0.9841, Test Loss: 0.3738, Test Acc: 0.8485
+Epoch 18/25, Train Loss: 0.1439, Train Acc: 0.9848, Test Loss: 0.3774, Test Acc: 0.8424
+Epoch 19/25, Train Loss: 0.1413, Train Acc: 0.9845, Test Loss: 0.3757, Test Acc: 0.8530
+Model saved with accuracy: 0.8530
+Epoch 20/25, Train Loss: 0.1423, Train Acc: 0.9795, Test Loss: 0.3764, Test Acc: 0.8485
+Epoch 21/25, Train Loss: 0.1402, Train Acc: 0.9833, Test Loss: 0.3729, Test Acc: 0.8500
+Epoch 22/25, Train Loss: 0.1399, Train Acc: 0.9852, Test Loss: 0.3778, Test Acc: 0.8485
+Epoch 23/25, Train Loss: 0.1399, Train Acc: 0.9822, Test Loss: 0.3769, Test Acc: 0.8470
+Epoch 24/25, Train Loss: 0.1378, Train Acc: 0.9856, Test Loss: 0.3793, Test Acc: 0.8515
+Epoch 25/25, Train Loss: 0.1384, Train Acc: 0.9845, Test Loss: 0.3788, Test Acc: 0.8515
+
+--- Final Evaluation for Ensemble Model ---
+
+Overall Test Accuracy: 0.8530
+
+Classification Report:
+                                precision    recall  f1-score   support
+
+https://cse.buet.ac.bd/moodle/       0.81      0.77      0.79       220
+            https://google.com       0.81      0.80      0.80       220
+        https://prothomalo.com       0.94      0.99      0.96       220
+
+                      accuracy                           0.85       660
+                     macro avg       0.85      0.85      0.85       660
+                  weighted avg       0.85      0.85      0.85       660
+
+
+============================================================
+FINAL MODEL COMPARISON
+============================================================
+1. Ensemble: 0.8530
+2. Complex CNN: 0.8364
+3. Basic CNN: 0.8258
+4. Hybrid CNN-Transformer: 0.8197
+5. Advanced ResNet: 0.7848
+6. Transformer: 0.7682
+
+Best performing model: Ensemble
+Best accuracy: 0.8530
+Complex CNN accuracy: 0.8364
+✓ Successfully outperformed Complex CNN by 0.0167 (1.67%)
+
+============================================================
+DETAILED PERFORMANCE ANALYSIS
+============================================================
+Dataset Analysis:
+  Total samples: 3300
+  Samples per class: ~1100
+  Test samples: 660
+  Test per class: ~220
+
+Model Performance Analysis:
+  Basic CNN: 0.8258
+  Complex CNN: 0.8364
+  Advanced ResNet: 0.7848
+  Transformer: 0.7682
+  Hybrid CNN-Transformer: 0.8197
+  Ensemble: 0.8530
+
+Best Model: Ensemble (0.8530)
+✓ Successfully outperformed Complex CNN by 0.0167
+
+Best model (Ensemble) saved as 'model.pth'
+Enhanced model metadata saved to 'model_metadata.json'

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Fingerprinting</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        body {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .results-table {
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Hide the table initially */
+        .hidden {
+            display: none;
+        }
+
+        .heatmap-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .heatmap-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            margin: 10px 0;
+        }
+
+        .trace-info {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <main class="container" x-data="app()">
+        <h1>CSE406: Website Fingerprinting</h1>        <!-- Button group for all functionality -->
+        <div class="button-group">
+            <button @click="collectLatencyData()" :disabled="isCollecting">Collect Latency Data</button>
+            <button @click="collectTraceData()" :disabled="isCollecting">Collect Trace</button>
+            <button @click="downloadTraces()" :disabled="traces.length === 0">Download Traces</button>
+            <button @click="refreshResults()">Refresh results</button>
+            <button @click="clearResults()">Clear all results</button>
+        </div>        <!-- Single prediction button - centered on its own line -->
+        <div style="text-align: center; margin-bottom: 1rem;">
+            <button @click="toggleRealTimeDetection()" 
+                    :disabled="isCollecting || isRealTimeActive" 
+                    x-text="isRealTimeActive ? 'Predicting...' : 'Predict Current Website'">
+            </button>
+        </div>
+
+        <!-- Status display -->
+        <div x-show="isCollecting" class="trace-info">
+            <p><strong>Status:</strong> <span x-text="statusMessage"></span></p>
+        </div>        <!-- Latency Results Table, initially hidden -->
+        <div :class="{ 'hidden': !latencyResults || showingTraces || isCollecting || isRealTimeActive }">
+            <div class="results-container">
+                <h4>Latency data collection complete!</h4>
+                <h3>Latency Results</h3>
+                <table class="results-table">
+                    <thead>
+                        <tr>
+                            <th>N</th>
+                            <th>Median Access Latency (ms)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template x-for="(time, n) in latencyResults" :key="n">
+                            <tr>
+                                <td x-text="n"></td>
+                                <td x-text="time.toFixed(2)"></td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Trace Results Display -->
+        <div x-show="showingTraces && traces.length > 0">
+            <h3>Trace Heatmaps</h3>
+            <p>Trace data collected and visualized using matplotlib.</p>
+            
+            <div class="heatmap-container">
+                <template x-for="(trace, index) in traces" :key="index">
+                    <div>
+                        <!-- Display the heatmap image -->
+                        <img :src="trace.heatmap_url" :alt="'Heatmap ' + (index + 1)">
+                        <!-- Display trace information -->
+                        <p x-text="trace.info"></p>
+                    </div>
+                </template>
+            </div>
+        </div>        <!-- Single Prediction Results Display -->
+        <div x-show="currentPrediction.website !== 'No prediction yet'" class="trace-info">
+            <h3>🔍 Website Prediction Result</h3>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <p><strong>Predicted Website:</strong> <span x-text="currentPrediction.website" style="font-size: 1.2em; color: #007bff;"></span></p>
+                    <p><strong>Confidence:</strong> <span x-text="(currentPrediction.confidence * 100).toFixed(1) + '%'"></span></p>
+                </div>
+                <div>
+                    <p><strong>Status:</strong> <span x-text="realTimeStatus"></span></p>
+                    <p><strong>Prediction Time:</strong> <span x-text="lastUpdateTime"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Message display -->
+        <div x-show="message" class="trace-info">
+            <p x-text="message"></p>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>

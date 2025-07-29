@@ -1,0 +1,10 @@
+To block RA packets
+```
+netsh advfirewall firewall add rule name=”Block RA” protocol=icmpv6:134,any dir=in
+action=block
+```
+
+To allow RA packets after blocking them
+```
+netsh advfirewall firewall set rule name=”Block RA” new enable=no
+```
